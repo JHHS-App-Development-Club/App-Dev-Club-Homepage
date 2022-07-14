@@ -1,0 +1,99 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;    
+}
+
+section {
+    padding: 75px;
+}
+
+.aboutBody {
+    display: flex;
+    gap: 40px;
+}
+
+.aboutBodySection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.border {
+    width: 5px;
+    background-color: #F1F1F1;
+}
+
+.listItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.listItemContent {
+    font-size: 25px;
+}
+
+.listNumberCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #0E9BBD;
+    border-radius: 50%;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+}
+
+.listNumberContent {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0E9BBD;
+}
+
+.secondaryDarkListNumber {
+    border: 4px solid #10728A;
+}
+
+.secondaryDarkListNumber .listNumberContent {
+    color: #10728A;
+}
+
+.tertiaryDarkListNumber {
+    border: 4px solid #0B4F60;
+}
+
+.tertiaryDarkListNumber .listNumberContent {
+    color: #0B4F60;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        padding: 25px;
+    }
+
+    .aboutBody {
+        flex-direction: column;
+    }
+
+    .aboutBodySection {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .border {
+        width: 100%;
+        height: 5px;
+    }
+}
