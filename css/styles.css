@@ -76,9 +76,69 @@ section {
     color: #0B4F60;
 }
 
+.appHeader {
+    font-size: 25px;   
+}
+
+.appContent {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.appsWrapper {
+    display: flex;
+    gap: 40px;
+    height: fit-content;
+}
+
+.appWrapper {
+    flex: 1;
+}
+
+.phone {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    max-width: 300px;
+}
+
+.phone1 {
+    position: absolute;
+    z-index: 1;
+    top: 3vw;
+    left: 10vw;
+    width: 20vw;
+    max-width: 300px;
+}
+
+.phoneWrapper {
+    position: relative;
+}
+
+.mobileOnlyApps {
+    display: none;
+}
+
+
 @media screen and (max-width: 900px) {
     section {
         padding: 25px;
+    }
+
+    .phone {
+        top: 0;
+        left: 0;
+
+        width: 40vw;
+        max-width: 300px;
+    }
+
+    .phone1 {
+        top: 5vh;
+        left: 20vw;
+        width: 40vw;
     }
 
     .aboutBody {
@@ -96,4 +156,19 @@ section {
         width: 100%;
         height: 5px;
     }
+
+    
+    .desktopOnlyApps {
+        display: none;
+    }
+
+    .mobileOnlyApps {
+        display: block;
+        height: fit-content;
+    }
+
+    .appsWrapper {
+        flex-direction: column;    
+    }
 }
+
