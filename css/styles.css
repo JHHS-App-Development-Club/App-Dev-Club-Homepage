@@ -1,99 +1,288 @@
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+  color: white;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 p {
-    font-size: 20px;    
+  font-size: 20px;
 }
 
-section {
-    padding: 75px;
+section.whatWeDo {
+  padding: 75px;
+}
+section.appWorked {
+  padding: 75px;
 }
 
 .aboutBody {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 .aboutBodySection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.border {
+  width: 5px;
+  background-color: #f1f1f1;
+}
+
+.listItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.listItemContent {
+  font-size: 25px;
+}
+
+.listNumberCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #0e9bbd;
+  border-radius: 50%;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.listNumberContent {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e9bbd;
+}
+
+.secondaryDarkListNumber {
+  border: 4px solid #10728a;
+}
+
+.secondaryDarkListNumber .listNumberContent {
+  color: #10728a;
+}
+
+.tertiaryDarkListNumber {
+  border: 4px solid #0b4f60;
+}
+
+.tertiaryDarkListNumber .listNumberContent {
+  color: #0b4f60;
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    padding: 25px;
+  }
+
+  .aboutBody {
+    flex-direction: column;
+  }
+
+  .aboutBodySection {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
 
+  .border {
+    width: 100%;
+    height: 5px;
+  }
 }
 
-.border {
-    width: 5px;
-    background-color: #F1F1F1;
+.header a {
+  color: white;
+}
+/* header */
+
+.header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
-.listItem {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: transparent;
 }
 
-.listItemContent {
-    font-size: 25px;
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 200%;
 }
 
-.listNumberCircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid #0E9BBD;
-    border-radius: 50%;
-    width: 30px;
-    min-width: 30px;
-    height: 30px;
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: transparent;
+  color: pink;
+  transition: 0.4s;
 }
 
-.listNumberContent {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0E9BBD;
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.secondaryDarkListNumber {
-    border: 4px solid #10728A;
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
-.secondaryDarkListNumber .listNumberContent {
-    color: #10728A;
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
 }
 
-.tertiaryDarkListNumber {
-    border: 4px solid #0B4F60;
+.header .menu-icon .navicon {
+  background: none;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
 }
 
-.tertiaryDarkListNumber .listNumberContent {
-    color: #0B4F60;
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
 
-@media screen and (max-width: 900px) {
-    section {
-        padding: 25px;
-    }
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
 
-    .aboutBody {
-        flex-direction: column;
-    }
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
 
-    .aboutBodySection {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+/* menu btn */
 
-    .border {
-        width: 100%;
-        height: 5px;
-    }
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* background image here */
+
+.hero {
+  background-image: url(../images/iphone.jpg);
+  height: 1500px;
+  width: auto;
+}
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.title {
+  padding-top: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 700%;
+  width: 60%;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 175%;
+  width: 650px;
+  margin: 0 auto;
+  line-height: 2.5;
+  padding-top: 50px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#navbar-header {
+  color: white;
+  font-size: 300%;
+}
+
+.menu-icon {
+  margin-right: 30px;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 50%;
 }
