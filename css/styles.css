@@ -498,7 +498,7 @@ section.appWorked {
 
     .mobileOnlyApps {
         display: block;
-        height: 90vh !important;
+        height: 60vh !important;
     }
 
     .appsWrapper {
