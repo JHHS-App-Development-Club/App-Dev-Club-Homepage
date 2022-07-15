@@ -7,7 +7,7 @@ h2 {
 }
 
 p {
-    font-size: 20px;    
+    font-size: 20px;
 }
 
 section {
@@ -77,7 +77,7 @@ section {
 }
 
 .appHeader {
-    font-size: 25px;   
+    font-size: 25px;
 }
 
 .appContent {
@@ -88,12 +88,12 @@ section {
 .appsWrapper {
     display: flex;
     gap: 40px;
-    height: fit-content;
 }
 
 .appWrapper {
     flex: 1;
 }
+
 
 .phone {
     position: absolute;
@@ -121,6 +121,129 @@ section {
     display: none;
 }
 
+.desktopOnlyApps {
+    height: 40vh
+}
+
+.header {
+    font-size: 40px;
+    text-align: center;
+}
+
+.contentbox {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+.centerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.description {
+    font-size: 25px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: fit-content;
+    height: 70px;
+    padding: 5px 30px;
+    border-radius: 70px;
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    gap: 15px;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    text-decoration:none;
+}
+
+.button p {
+    text-decoration:none;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.discord {
+    background: linear-gradient(to right, #0E9CBC, #0066DB);
+}
+
+.github {
+    background: linear-gradient(to right, #333333, #616161);
+}
+
+.mail {
+    background: linear-gradient(to right, #1E7B92, #0B5560);
+}
+
+.link {
+    color: #0B4F60;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: #0cb1d6;
+}
+
+.map {
+    width: 80vw;
+    max-width: 1000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 1400px) {
+
+    .phone {
+        top: 0;
+        left: 0;
+        width: 30vw;
+        min-width: 300px
+    }
+
+    .phone1 {
+        top: 2vh;
+        left: 8vw;
+        width: 30vw;
+        min-width: 300px
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+    .phone {
+        top: 0;
+        left: 0;
+        width: 30vw;
+    }
+
+    .phone1 {
+        top: 2vh;
+        left: 12vw;
+        width: 30vw;
+    }
+}
+
+
 
 @media screen and (max-width: 900px) {
     section {
@@ -130,15 +253,13 @@ section {
     .phone {
         top: 0;
         left: 0;
-
-        width: 40vw;
-        max-width: 300px;
+        width: 30vw;
     }
 
     .phone1 {
         top: 5vh;
         left: 20vw;
-        width: 40vw;
+        width: 30vw;
     }
 
     .aboutBody {
@@ -157,18 +278,44 @@ section {
         height: 5px;
     }
 
-    
+
     .desktopOnlyApps {
         display: none;
     }
 
     .mobileOnlyApps {
         display: block;
-        height: fit-content;
+        height: 90vh !important;
     }
 
     .appsWrapper {
-        flex-direction: column;    
+        flex-direction: column;
+    }
+
+    .appWrapper {
+        height: 60vh;
     }
 }
 
+
+
+@media screen and (max-width: 768px) {
+    .phone {
+        top: 0;
+        left: 0;
+
+        width: 40vw;
+        min-width: 200px
+    }
+
+    .phone1 {
+        top: 5vh;
+        left: 30vw;
+        width: 40vw;
+        min-width: 200px;
+    }
+
+    .appWrapper {
+        height: 40vh;
+    }
+}
