@@ -93,6 +93,7 @@ section.appWorked {
 
 .appHeader {
     font-size: 25px;
+    color: black;
 }
 
 .appContent {
@@ -111,33 +112,16 @@ section.appWorked {
 
 
 .phone {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 20vw;
-    max-width: 300px;
+    width: 40%;
 }
 
-.phone1 {
-    position: absolute;
-    z-index: 1;
-    top: 3vw;
-    left: 10vw;
-    width: 20vw;
-    max-width: 300px;
-}
 
 .phoneWrapper {
-    position: relative;
+    display: flex;
 }
 
 .mobileOnlyApps {
     display: none;
-}
-
-.desktopOnlyApps {
-    height: 70vh
 }
 
 .header2 {
@@ -225,37 +209,10 @@ section.appWorked {
     border-radius: 30px;
 }
 
-@media screen and (min-width: 1400px) {
-
-    .phone {
-        top: 0;
-        left: 0;
-        width: 30vw;
-        min-width: 300px
-    }
-
-    .phone1 {
-        top: 2vh;
-        left: 8vw;
-        width: 30vw;
-        min-width: 300px
-    }
-}
 
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
 
-    .phone {
-        top: 0;
-        left: 0;
-        width: 30vw;
-    }
-
-    .phone1 {
-        top: 2vh;
-        left: 12vw;
-        width: 30vw;
-    }
 
     section {
         padding: 25px;
@@ -335,7 +292,7 @@ section.appWorked {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 18px 10px;
     position: relative;
     user-select: none;
 }
@@ -401,9 +358,14 @@ section.appWorked {
     background-image: url(../images/iphone.jpg);
     height: 1500px;
     width: auto;
+    background-size: cover;
 }
 
 /* 48em = 768px */
+
+.header li a {
+    font-size: 20px;
+}
 
 @media (min-width: 48em) {
     .header li {
@@ -412,6 +374,7 @@ section.appWorked {
 
     .header li a {
         padding: 20px 30px;
+        font-size: 20px;
     }
 
     .header .menu {
@@ -429,17 +392,18 @@ section.appWorked {
     padding-top: 300px;
     margin: 0 auto;
     text-align: center;
-    font-size: 700%;
+    font-size: 60px;
     width: 60%;
 }
 
 .sub-title {
     text-align: center;
-    font-size: 175%;
+    font-size: 25px;
     width: 650px;
     margin: 0 auto;
-    line-height: 2.5;
+    line-height: 2;
     padding-top: 50px;
+    font-weight: normal;
 }
 
 .underline {
@@ -448,14 +412,19 @@ section.appWorked {
 
 #navbar-header {
     color: white;
-    font-size: 300%;
+    font-size: 20px;
 }
 
 .menu-icon {
-    margin-right: 30px;
-    margin-top: 15px;
+    margin-right: 50px;
+    margin-top: 10px;
     background-color: white;
     border-radius: 50%;
+}
+
+.contentWrapper {
+    margin: 0 auto;
+    max-width: 1500px;
 }
 
 @media screen and (max-width: 900px) {
@@ -463,16 +432,12 @@ section.appWorked {
         padding: 25px;
     }
 
-    .phone {
-        top: 0;
-        left: 0;
-        width: 30vw;
+    section.whatWeDo {
+        padding: 25px;
     }
 
-    .phone1 {
-        top: 5vh;
-        left: 20vw;
-        width: 30vw;
+    section.appWorked {
+        padding: 25px;
     }
 
     .aboutBody {
@@ -498,27 +463,19 @@ section.appWorked {
 
     .mobileOnlyApps {
         display: block;
-        height: 60vh !important;
     }
 
     .appsWrapper {
         flex-direction: column;
-    }
-
-    .appWrapper {
-        height: 60vh;
     }
 }
 
 
 
 @media screen and (max-width: 768px) {
-    .phone {
-        top: 0;
-        left: 0;
 
-        width: 40vw;
-        min-width: 200px
+    .title {
+        font-size: 50px;
     }
 
     .phone1 {
@@ -528,7 +485,4 @@ section.appWorked {
         min-width: 200px;
     }
 
-    .appWrapper {
-        height: 40vh;
-    }
 }
