@@ -20,3 +20,20 @@ navbarButton.onclick = () => {
         navbar.classList.toggle("scrolled");
     }
 }
+
+const reminderButton = document.getElementById("reminder-1")
+const command1 = document.getElementById("command-1")
+
+reminderButton.onclick = () => {
+    reminderButton.style.display = "none";
+    command1.style.display = "block";
+}
+
+
+const reminderButton2 = document.getElementById("reminder-2")
+const command2 = document.getElementById("command-2")
+
+reminderButton2.onclick = () => {
+    reminderButton2.style.display = "none";
+    command2.style.display = "block";
+}

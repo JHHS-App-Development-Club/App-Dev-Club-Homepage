@@ -218,6 +218,18 @@ section.appWorked {
     margin: 5px 0;
 }
 
+.siri-command {
+    display: none;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+}
+
+.siri-command.dark {
+    color: #2e2e2e;
+}
+
 .white-link {
     color: white;
     text-decoration: underline;
