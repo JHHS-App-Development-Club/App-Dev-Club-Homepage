@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <section class="hero">
+    <section id="hero" class="hero">
       <header id="navbar" class="header">
-        <a id="navbar-header" href="index.html" class="logo">
+        <a id="navbar-header" href="#hero" class="logo">
           📱 JHHS App Dev Club</a
         >
         <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -24,9 +24,9 @@
           ><span class="navicon"></span
         ></label>
         <ul class="menu">
-          <li><a href="#">What We Do</a></li>
-          <li><a href="#">Socials</a></li>
-          <li><a href="#">Join the Club</a></li>
+          <li><a href="#about">What We Do</a></li>
+          <li><a href="#cta">Socials</a></li>
+          <li><a href="#cta">Join the Club</a></li>
         </ul>
       </header>
       <h1 class="title">Take your coding skills to the next level</h1>
@@ -37,7 +37,7 @@
       <!-- <button>Join Today</button> -->
       <!-- <button>Join Discord</button> -->
       <div class="action-buttons">
-        <a class="button cta" href="#" target="_blank">
+        <a class="button cta" href="#cta" target="_blank">
           Join Today
         </a>
         <a class="button discord" href="https://discord.gg/Qp4yZVvXuk" target="_blank">
@@ -48,6 +48,7 @@
       <p class="description white-text">Every Friday, 3PM @ Room 158</p>
       <p class="white-link">Set a Reminder</p>
     </section>
+    <div id="about"></div>
     <div class = "contentWrapper">
    <section class="whatWeDo">
       <h2>What you'll do</h2>
@@ -82,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section class="appWorked">
+    <section id="apps" class="appWorked">
       <h2>See some apps we'll be building this year</h2>
       <div class="appsWrapper">
         <div class="appWrapper">
@@ -131,8 +132,9 @@
       </div>
 
     </section>
+    <div id="cta"></div>
     <br/>
-
+    
     <h2 class="header2">Join the App Dev Club today!</h2>
     <p class="description">Every Friday, 3PM @ Room 158</p>
     <p class="link">Set a Reminder</p>
